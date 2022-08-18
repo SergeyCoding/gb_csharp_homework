@@ -4,4 +4,12 @@
 // a = 2 b = 10 -> max = 10
 // a = -9 b = -3 -> max = -3
 
-Console.WriteLine("Hello, World!");
+Console.Write("Первое число: ");
+int x1 = int.Parse(Console.ReadLine());
+Console.Write("Второе число: ");
+int x2 = int.Parse(Console.ReadLine());
+
+if (x1 > x2)
+    System.Console.WriteLine($"max = {x1}");
+else
+    System.Console.WriteLine($"max = {x2}");
