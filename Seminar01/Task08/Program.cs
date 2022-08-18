@@ -13,17 +13,14 @@ if (N < 2)
 }
 else
 {
-    int nCurrent = 2;
+    System.Console.Write(2);
+
+    int nCurrent = 4;
 
     while (nCurrent <= N)
     {
         if (nCurrent % 2 == 0)
-        {
-            if (nCurrent > 2)
-                System.Console.Write(", ");
-
-            System.Console.Write(nCurrent);
-        }
+            System.Console.Write($", {nCurrent}");
 
         nCurrent++;
     }
