@@ -4,4 +4,11 @@
 // -3 -> нет
 // 7 -> нет
 
-Console.WriteLine("Hello, World!");
+Console.WriteLine("Task 06");
+Console.Write("Введите число: ");
+int x1 = int.Parse(Console.ReadLine());
+
+
+if (x1 % 2 == 0) System.Console.WriteLine("да");
+else System.Console.WriteLine("нет");
+
