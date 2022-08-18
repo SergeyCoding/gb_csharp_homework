@@ -4,6 +4,7 @@
 // a = 2 b = 10 -> max = 10
 // a = -9 b = -3 -> max = -3
 
+Console.WriteLine("Task 02");
 Console.Write("Первое число: ");
 int x1 = int.Parse(Console.ReadLine());
 Console.Write("Второе число: ");
