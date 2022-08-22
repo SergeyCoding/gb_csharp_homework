@@ -5,9 +5,9 @@
 
 Console.WriteLine("Task 10");
 Console.Write("Введите трехзначное число: ");
-int N = int.Parse(Console.ReadLine());
+int number = int.Parse(Console.ReadLine());
 
-if (N < 2)
-{
-    System.Console.WriteLine("Нет чисел для вывода");
-}
+if (number < 100 || number > 999)
+    Console.WriteLine("Ошибка! Необходимо ввести трехзначное число");
+else
+    Console.WriteLine(number % 100 / 10);
