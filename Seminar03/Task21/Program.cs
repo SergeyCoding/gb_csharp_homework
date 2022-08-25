@@ -4,6 +4,8 @@
 // A (7,-5, 0); B (1,-1,9) -> 11.53
 
 #pragma warning disable CS8604 
+Console.WriteLine("Task 21");
+
 Console.Write("Введите X1: ");
 int x1 = int.Parse(Console.ReadLine());
 Console.Write("Введите Y1: ");

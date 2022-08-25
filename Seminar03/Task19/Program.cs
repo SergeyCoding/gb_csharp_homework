@@ -5,7 +5,9 @@
 // 12821 -> да
 // 23432 -> да
 
+#pragma warning disable CS8604 
 Console.WriteLine("Task 19");
+
 Console.Write("Введите пятизначное число: ");
 int number = int.Parse(Console.ReadLine());
 
