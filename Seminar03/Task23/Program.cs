@@ -13,7 +13,7 @@ int n = 1;
 
 while (n <= number)
 {
-    Console.Write(n * n * n);
+    Console.Write(Math.Pow(n, 3));
 
     if (n < number)
         Console.Write(", ");

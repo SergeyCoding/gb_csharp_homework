@@ -22,5 +22,4 @@ else
         Console.WriteLine("да");
     else
         Console.WriteLine("нет");
-
 }
