@@ -1,17 +1,20 @@
 ﻿// Задача “со звездочкой”: Напишите функцию, которая принимает одно число - высоту елочки и рисует ее в консоли звездочками.
 
-string LineFormat(int rowNumber, int width)
-{
-    int starsCount = rowNumber * 2 - 1;
-    return new string(' ', (width - starsCount) / 2) + new String('*', starsCount);
-}
-
-void TreeDraw(int lineCount)
+void DrawTree(int lineCount)
 {
     int width = lineCount * 2 - 1;
+    string starsString = "*";
 
-    for (int i = 1; i <= lineCount; i++)
-        Console.WriteLine(LineFormat(i, width));
+    for (int i = 0; i < lineCount; i++)
+    {
+        //Console.Write(new string(' ', (width - i * 2 - 1) / 2));
+        for (int j = 0; j < (width - i * 2 - 1) / 2; j++)
+            Console.Write(' ');
+
+        Console.WriteLine(starsString);
+
+        starsString = starsString + "**";
+    }
 }
 
 #pragma warning disable CS8604 
@@ -26,4 +29,4 @@ if (height < 1)
     return;
 }
 
-TreeDraw(height);
+DrawTree(height);
