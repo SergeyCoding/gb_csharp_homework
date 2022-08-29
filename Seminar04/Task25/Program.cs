@@ -12,5 +12,19 @@ int Pow(int a, int b)
     return result;
 }
 
-Console.WriteLine(Pow(3, 5));
-Console.WriteLine(Pow(2, 4));
+#pragma warning disable CS8604 
+Console.WriteLine("Task 25");
+
+Console.Write("Введите число A: ");
+int numberA = int.Parse(Console.ReadLine());
+
+Console.Write("Введите число B: ");
+int numberB = int.Parse(Console.ReadLine());
+
+if (numberB < 1)
+{
+    System.Console.WriteLine("Ошибка! Число B должно быть натуральным");
+    return;
+}
+
+Console.WriteLine(Pow(numberA, numberB));
