@@ -23,7 +23,7 @@ int numberB = int.Parse(Console.ReadLine());
 
 if (numberB < 1)
 {
-    System.Console.WriteLine("Ошибка! Число B должно быть натуральным");
+    Console.WriteLine("Ошибка! Число B должно быть натуральным");
     return;
 }
 
