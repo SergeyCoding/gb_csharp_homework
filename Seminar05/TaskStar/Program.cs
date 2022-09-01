@@ -19,7 +19,7 @@ void Sort(int[] array)
     {
         for (int j = i + 1; j < array.Length; j++)
         {
-            if (array[i] > array[j])
+            if (array[i] < array[j])
             {
                 int temp = array[j];
                 array[j] = array[i];
