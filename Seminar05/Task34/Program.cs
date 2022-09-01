@@ -30,6 +30,11 @@ Console.WriteLine("Task 34");
 
 Console.Write("Введите размер массива: ");
 int numCount = int.Parse(Console.ReadLine());
+if (numCount < 1)
+{
+    System.Console.WriteLine("Ошибка! Введите корректный размер массива");
+    return;
+}
 
 int[] arr = GetArray(numCount, 10, 99);
 Console.WriteLine(String.Join(", ", arr));
