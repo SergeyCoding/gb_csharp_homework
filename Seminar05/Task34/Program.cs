@@ -36,7 +36,7 @@ if (numCount < 1)
     return;
 }
 
-int[] arr = GetArray(numCount, 10, 99);
+int[] arr = GetArray(numCount, 100, 999);
 Console.WriteLine(String.Join(", ", arr));
 
 Console.WriteLine($"Четных: {EvenCount(arr)}");
