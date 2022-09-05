@@ -2,6 +2,36 @@
 // 0, 7, 8, -2, -2 -> 2
 // 1, -7, 567, 89, 223-> 3
 
-// Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, 
-// заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
-// b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
+int PositiveCount(int[] array)
+{
+    int counter = 0;
+    foreach (var item in array)
+    {
+        if (item > 0)
+            counter++;
+    }
+
+    return counter;
+}
+
+#pragma warning disable CS8604 
+Console.WriteLine("Task 41");
+
+Console.Write("Введите размер массива: ");
+int numCount = int.Parse(Console.ReadLine());
+if (numCount < 1)
+{
+    System.Console.WriteLine("Ошибка! Введите корректный размер массива");
+    return;
+}
+
+int[] arr = new int[numCount];
+
+for (int i = 0; i < numCount; i++)
+{
+    Console.Write($"Введите {i}-ое число: ");
+    arr[i] = int.Parse(Console.ReadLine());
+}
+
+Console.WriteLine(String.Join(", ", arr));
+Console.WriteLine($"Чисел больше нуля: {PositiveCount(arr)}");
