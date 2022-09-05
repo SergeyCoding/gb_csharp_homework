@@ -23,7 +23,7 @@ int number = int.Parse(Console.ReadLine());
 
 if (number < 0)
 {
-    System.Console.WriteLine("Ошибка! Число B должно быть положительным");
+    Console.WriteLine("Ошибка! Число B должно быть положительным");
     return;
 }
 

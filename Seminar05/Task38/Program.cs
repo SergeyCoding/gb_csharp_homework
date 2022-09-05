@@ -37,7 +37,7 @@ Console.Write("Введите размер массива: ");
 int numCount = int.Parse(Console.ReadLine());
 if (numCount < 1)
 {
-    System.Console.WriteLine("Ошибка! Введите корректный размер массива");
+    Console.WriteLine("Ошибка! Введите корректный размер массива");
     return;
 }
 

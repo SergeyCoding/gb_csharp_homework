@@ -17,4 +17,4 @@ int max = x1;
 if (max < x2) max = x2;
 if (max < x3) max = x3;
 
-System.Console.WriteLine(max);
+Console.WriteLine(max);

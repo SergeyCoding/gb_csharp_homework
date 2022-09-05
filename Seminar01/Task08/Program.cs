@@ -9,21 +9,21 @@ int N = int.Parse(Console.ReadLine());
 
 if (N < 2)
 {
-    System.Console.WriteLine("Нет чисел для вывода");
+    Console.WriteLine("Нет чисел для вывода");
 }
 else
 {
-    System.Console.Write(2);
+    Console.Write(2);
 
     int nCurrent = 4;
 
     while (nCurrent <= N)
     {
         if (nCurrent % 2 == 0)
-            System.Console.Write($", {nCurrent}");
+            Console.Write($", {nCurrent}");
 
         nCurrent++;
     }
 
-    System.Console.WriteLine();
+    Console.WriteLine();
 }
