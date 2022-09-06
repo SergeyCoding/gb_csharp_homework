@@ -102,7 +102,6 @@ if (rows < 1 || cols < 1)
 var arr = GetArray(rows, cols, 1, 100);
 PrintArray(arr);
 
-System.Console.WriteLine();
+Console.WriteLine();
 
-var a = FlatArray(arr);
-Console.WriteLine(string.Join(", ", a));
+Console.WriteLine(string.Join(", ", FlatArray(arr)));
