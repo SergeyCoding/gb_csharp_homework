@@ -11,6 +11,6 @@ Console.Write("Второе число: ");
 int x2 = int.Parse(Console.ReadLine());
 
 if (x1 > x2)
-    System.Console.WriteLine($"max = {x1}");
+    Console.WriteLine($"max = {x1}");
 else
-    System.Console.WriteLine($"max = {x2}");
+    Console.WriteLine($"max = {x2}");

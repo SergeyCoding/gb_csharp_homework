@@ -26,7 +26,7 @@ int highNumber = int.Parse(Console.ReadLine());
 
 if (numCount < 1 || lowNumber > highNumber)
 {
-    System.Console.WriteLine("Ошибка! Проверьте введенные данные");
+    Console.WriteLine("Ошибка! Проверьте введенные данные");
     return;
 }
 

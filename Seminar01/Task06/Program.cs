@@ -9,6 +9,6 @@ Console.Write("Введите число: ");
 int x1 = int.Parse(Console.ReadLine());
 
 
-if (x1 % 2 == 0) System.Console.WriteLine("да");
-else System.Console.WriteLine("нет");
+if (x1 % 2 == 0) Console.WriteLine("да");
+else Console.WriteLine("нет");
 
