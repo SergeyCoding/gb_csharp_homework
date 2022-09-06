@@ -29,9 +29,9 @@ Console.WriteLine($"y = {line2[0]} * x + {line2[1]}");
 if (IsExistLineCross(line1, line2))
 {
     var coord = LinesCross(line1, line2);
-    System.Console.WriteLine($"({coord[0]}; {coord[1]}) ");
+    Console.WriteLine($"({coord[0]}; {coord[1]}) ");
 }
-else System.Console.WriteLine("Решения нет");
+else Console.WriteLine("Решения нет");
 
 
 
