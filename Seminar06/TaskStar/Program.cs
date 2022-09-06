@@ -88,9 +88,9 @@ int[] FlatArray(int[,] arr)
 Console.WriteLine("Task 6-Star");
 
 Console.Write("Введите rows: ");
-var rows = 3;// int.Parse(Console.ReadLine());
+var rows = int.Parse(Console.ReadLine());
 Console.Write("Введите cols: ");
-var cols = 3;//int.Parse(Console.ReadLine());
+var cols = int.Parse(Console.ReadLine());
 Console.WriteLine();
 
 if (rows < 1 || cols < 1)
@@ -102,9 +102,7 @@ if (rows < 1 || cols < 1)
 var arr = GetArray(rows, cols, 1, 100);
 PrintArray(arr);
 
-// var flatArr = new int[arr.Length];
-// System.Console.WriteLine(string.Join(", ", flatArr));
+System.Console.WriteLine();
+
 var a = FlatArray(arr);
 Console.WriteLine(string.Join(", ", a));
-
-Console.WriteLine("...");
