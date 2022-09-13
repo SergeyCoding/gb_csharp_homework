@@ -39,18 +39,14 @@ bool MoveNext(int[,] arr, int[,] mask, int row, int col, int drow, int dcol, int
     if (MoveNext(arr, mask, row, col, drow, dcol, counter))
         return true;
 
-    var phi = Math.Atan2(dcol, drow) - Math.PI / 2;
-    System.Console.WriteLine(phi / Math.PI * 90);
-    return MoveNext(arr, mask, row, col, (int)Math.Cos(phi), (int)Math.Sin(phi), counter);
-
-    // if (drow == 0 && dcol == 1)
-    //     return MoveNext(arr, mask, row, col, 1, 0, counter);
-    // if (drow == 1 && dcol == 0)
-    //     return MoveNext(arr, mask, row, col, 0, -1, counter);
-    // if (drow == 0 && dcol == -1)
-    //     return MoveNext(arr, mask, row, col, -1, 0, counter);
-    // if (drow == -1 && dcol == 0)
-    //     return MoveNext(arr, mask, row, col, 0, 1, counter);
+    if (drow == 0 && dcol == 1)
+        return MoveNext(arr, mask, row, col, 1, 0, counter);
+    if (drow == 1 && dcol == 0)
+        return MoveNext(arr, mask, row, col, 0, -1, counter);
+    if (drow == 0 && dcol == -1)
+        return MoveNext(arr, mask, row, col, -1, 0, counter);
+    if (drow == -1 && dcol == 0)
+        return MoveNext(arr, mask, row, col, 0, 1, counter);
 
 
     return false;
