@@ -57,4 +57,4 @@ if (number < 0)
     return;
 }
 
-System.Console.WriteLine(Sqrt(number));
+Console.WriteLine(Sqrt(number));

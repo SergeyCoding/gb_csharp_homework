@@ -83,4 +83,4 @@ PrintArray(arr);
 Console.WriteLine();
 
 
-System.Console.WriteLine($"{GetMinSumRow(arr)} строка");
+Console.WriteLine($"{GetMinSumRow(arr)} строка");

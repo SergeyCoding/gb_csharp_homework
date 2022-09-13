@@ -75,4 +75,4 @@ var average = GetAverageColsArray(arr);
 foreach (var item in average)
     Console.Write($"{item,10:F2}");
 
-System.Console.WriteLine();
+Console.WriteLine();

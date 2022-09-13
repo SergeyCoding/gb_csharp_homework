@@ -80,4 +80,4 @@ SortIntraRows(arr);
 
 PrintArray(arr);
 
-System.Console.WriteLine();
+Console.WriteLine();
