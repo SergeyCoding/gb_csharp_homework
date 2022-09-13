@@ -44,7 +44,7 @@ int Sqrt(int number)
 }
 
 #pragma warning disable CS8604 
-Console.WriteLine("Task 52");
+Console.WriteLine("Task 8-Star");
 
 Console.Write("Введите число: ");
 var number = int.Parse(Console.ReadLine());
