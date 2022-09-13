@@ -37,8 +37,6 @@ int Sqrt(int number)
             left = checkNumber;
         else
             right = checkNumber;
-
-        Console.WriteLine($"{left} {right}");
     }
 
     return right * right == number ? right : left;
