@@ -5,20 +5,6 @@
 // 11 16 15 06
 // 10 09 08 07
 
-int[,] GetArray(int rows, int cols, int minValue, int maxValue)
-{
-    int[,] res = new int[rows, cols];
-
-    for (int i = 0; i < rows; i++)
-    {
-        for (int j = 0; j < cols; j++)
-        {
-            res[i, j] = new Random().Next(minValue, maxValue + 1);
-        }
-    }
-    return res;
-}
-
 void PrintArray(int[,] array)
 {
     for (int row = 0; row < array.GetLength(0); row++)
@@ -53,14 +39,18 @@ bool MoveNext(int[,] arr, int[,] mask, int row, int col, int drow, int dcol, int
     if (MoveNext(arr, mask, row, col, drow, dcol, counter))
         return true;
 
-    if (drow == 0 && dcol == 1)
-        return MoveNext(arr, mask, row, col, 1, 0, counter);
-    if (drow == 1 && dcol == 0)
-        return MoveNext(arr, mask, row, col, 0, -1, counter);
-    if (drow == 0 && dcol == -1)
-        return MoveNext(arr, mask, row, col, -1, 0, counter);
-    if (drow == -1 && dcol == 0)
-        return MoveNext(arr, mask, row, col, 0, 1, counter);
+    var phi = Math.Atan2(dcol, drow) - Math.PI / 2;
+    System.Console.WriteLine(phi / Math.PI * 90);
+    return MoveNext(arr, mask, row, col, (int)Math.Cos(phi), (int)Math.Sin(phi), counter);
+
+    // if (drow == 0 && dcol == 1)
+    //     return MoveNext(arr, mask, row, col, 1, 0, counter);
+    // if (drow == 1 && dcol == 0)
+    //     return MoveNext(arr, mask, row, col, 0, -1, counter);
+    // if (drow == 0 && dcol == -1)
+    //     return MoveNext(arr, mask, row, col, -1, 0, counter);
+    // if (drow == -1 && dcol == 0)
+    //     return MoveNext(arr, mask, row, col, 0, 1, counter);
 
 
     return false;
