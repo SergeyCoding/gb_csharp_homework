@@ -1,9 +1,11 @@
-﻿// Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+﻿// Задача 56: Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов.
 // Например, задан массив:
 // 1 4 7 2
 // 5 9 2 3
 // 8 4 2 4
-// Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
+// 5 2 6 7
+
+// Программа считает сумму элементов в каждой строке и выдаёт номер строки с наименьшей суммой элементов: 1 строка
 
 int[,] GetArray(int rows, int cols, int minValue, int maxValue)
 {
@@ -32,27 +34,37 @@ void PrintArray(int[,] array)
     }
 }
 
-double[] GetAverageColsArray(int[,] arr)
+int SumRow(int[,] array, int row)
 {
-    double[] result = new double[arr.GetLength(1)];
+    int s = array[row, 0];
+    for (int col = 1; col < array.GetLength(1) - 1; col++)
+    {
+        if (s > array[row, col])
+            s = array[row, col];
+    }
+
+    return s;
+}
+
+int GetMinSumRow(int[,] arr)
+{
+    int s = SumRow(arr, 0);
+    int ind = 0;
     for (int i = 0; i < arr.GetLength(0); i++)
     {
-        for (int j = 0; j < arr.GetLength(1); j++)
+        int curSum = SumRow(arr, i);
+        if (s < curSum)
         {
-            result[j] += arr[i, j];
+            s = curSum;
+            ind = i;
         }
     }
 
-    for (int i = 0; i < result.Length; i++)
-    {
-        result[i] /= arr.GetLength(0);
-    }
-
-    return result;
+    return ind;
 }
 
 #pragma warning disable CS8604 
-Console.WriteLine("Task 52");
+Console.WriteLine("Task 56");
 
 Console.Write("Введите rows: ");
 var rows = int.Parse(Console.ReadLine());
@@ -66,13 +78,9 @@ if (rows < 1 || cols < 1)
     return;
 }
 
-var arr = GetArray(rows, cols, 1, 10);
+var arr = GetArray(rows, cols, 1, 100);
 PrintArray(arr);
 Console.WriteLine();
 
-var average = GetAverageColsArray(arr);
 
-foreach (var item in average)
-    Console.Write($"{item,10:F2}");
-
-Console.WriteLine();
+Console.WriteLine($"{GetMinSumRow(arr)} строка");
