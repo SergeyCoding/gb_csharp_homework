@@ -19,5 +19,11 @@ Console.Write("Введите N: ");
 var n = int.Parse(Console.ReadLine());
 Console.WriteLine();
 
-System.Console.WriteLine(Sum(m, n));
+if (m < 1 || n < 1)
+{
+    Console.WriteLine("Ошибка! Введите корректные данные");
+    return;
+}
+
+Console.WriteLine(Sum(m, n));
 

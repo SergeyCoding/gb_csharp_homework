@@ -21,4 +21,4 @@ Console.Write("Введите N: ");
 var n = int.Parse(Console.ReadLine());
 Console.WriteLine();
 
-System.Console.WriteLine(Akkerman(m, n));
+Console.WriteLine(Akkerman(m, n));
