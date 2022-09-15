@@ -13,7 +13,7 @@ int Akkerman(int m, int n)
 }
 
 #pragma warning disable CS8604 
-Console.WriteLine("Task 66");
+Console.WriteLine("Task 68");
 
 Console.Write("Введите M: ");
 var m = int.Parse(Console.ReadLine());
