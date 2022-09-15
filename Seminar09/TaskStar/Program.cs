@@ -39,15 +39,6 @@ Console.Write("Выражение: ");
 var str = Console.ReadLine();
 PrintResult(str);
 
-
-//PrintResult("())");
-//PrintResult("()()");
-//PrintResult("()[{]");
-//PrintResult("{()[]}");
-//PrintResult(")())");
-//PrintResult("())");
-//PrintResult("[()({{{}}})]");
-
 void PrintResult(string str)
 {
     Console.WriteLine($"{str} - {Brackets(str)}");
