@@ -36,16 +36,8 @@ bool Brackets(string s)
 Console.WriteLine("Task 9-Star");
 
 Console.Write("Выражение: ");
-// var str = Console.ReadLine();
-// PrintResult(str);
-
-PrintResult("())");
-PrintResult("()()");
-PrintResult("()[{]");
-PrintResult("{()[]}");
-PrintResult(")())");
-PrintResult("())");
-PrintResult("[()({{{}}})]");
+var str = Console.ReadLine();
+PrintResult(str);
 
 void PrintResult(string str)
 {
