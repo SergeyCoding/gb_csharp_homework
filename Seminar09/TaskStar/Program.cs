@@ -4,19 +4,19 @@
 // Пример неправильной: (], ({)}
 // Написать программу, которая определяет правильная ли скобочная последовательность была введена
 
-var bracketOpen = new[] { '{', '[', '(' };
-var bracketClose = new[] { '}', ']', ')' };
-
 bool Brackets(string s)
 {
+    var bracketOpen = new[] { '{', '[', '(' };
+    var bracketClose = new[] { '}', ']', ')' };
+
     var stack = new Stack<char>();
 
     foreach (var c in s)
     {
-        for (int i = 0; i < bracketOpen.Length; i++)
+        if (bracketOpen.Contains(c))
         {
-            if (bracketOpen[i] == c)
-                stack.Push(c);
+            stack.Push(c);
+            continue;
         }
 
         for (int i = 0; i < bracketOpen.Length; i++)
@@ -36,8 +36,16 @@ bool Brackets(string s)
 Console.WriteLine("Task 9-Star");
 
 Console.Write("Выражение: ");
-var str = Console.ReadLine();
-PrintResult(str);
+// var str = Console.ReadLine();
+// PrintResult(str);
+
+PrintResult("())");
+PrintResult("()()");
+PrintResult("()[{]");
+PrintResult("{()[]}");
+PrintResult(")())");
+PrintResult("())");
+PrintResult("[()({{{}}})]");
 
 void PrintResult(string str)
 {
